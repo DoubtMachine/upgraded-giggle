@@ -1,0 +1,89 @@
+body{
+background-image: url("world_map.jpg");
+}
+h1{
+    font-family: "Courier New", sans-serif;
+    display: block;
+    text-align: center;
+}
+#all-cards{
+    border-style: solid;
+    border-width: 5px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to top right, blue, deeppink);
+    justify-content: space-around;
+    align-items: center;
+    background-color: royalblue;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    width: 60%;
+    /*max-width: 60%;*/
+    height: 500px;
+    margin: auto;
+    z-index: -200;
+}
+
+.card-front, .card-back{
+    font-family: "courier", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card, .filler{
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    font-family: "courier", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+
+    justify-content: center;
+    align-items: center;
+}
+.card-front{
+    border: 2px dashed black;
+    background-color: #bedfeb;
+    color: #580096;
+    /* margin: 5px; */
+    /* transition: all 1s linear; */
+    backface-visibility: hidden;
+
+}
+.card-back{
+    background-color: #222;
+    color: white;
+    /* display: none; */
+    position: absolute;
+    /* visibility: hidden; */
+    z-index: -101;
+
+}
+#card1{
+    grid-column: 1;
+}
+#card2{
+    grid-column: 2;
+}
+#card3{
+    grid-column: 3;
+}
+.card:hover, .card-back{
+    transform: rotateY(180deg);
+    transition: all 1s linear;
+}
+
+/* #card-back_id{
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    z-index: -101;
+}*/
+.filler{
+
+}
